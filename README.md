@@ -26,11 +26,11 @@ $ docker run -it sipp
 You can pass your SIPp arguments to the run command, example:
 
 ```
-$ docker run -it ciscomonkey/sipp -sn uac
+$ docker run -it sipp -sn uac
 ```
 
 If you want to use custom scenarios you can use the Docker VOLUME argument to include your local files inside your Docker image.  The `-v $PWD/scenarios` is your local hosts working directory and `/sipp` is the containers working directory.
 
 ```
-$ docker run -it -v $PWD/scenarios:/sipp -p 5060 ciscomonkey/sipp -sf opt1.xml DEST_IP -s DEST_NUMBER
+$ docker run -it -v $PWD/scenarios:/sipp -p 5060 sipp -sf opt1.xml DEST_IP -s DEST_NUMBER
 ```
