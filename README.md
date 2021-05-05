@@ -34,3 +34,11 @@ If you want to use custom scenarios you can use the Docker VOLUME argument to in
 ```
 $ docker run -it -v $PWD/scenarios:/sipp -p 5060 sipp -sf opt1.xml DEST_IP -s DEST_NUMBER
 ```
+
+## Call ID
+
+Assuming ```uuidgen``` is installed on your box you can use something like this:
+
+```
+$ docker run -it ciscomonkey/sipp uac 127.0.0.1 -s DEST_NUMBER -cid_str $(uuidgen)@%s
+```
